@@ -1,0 +1,310 @@
+/* Universal styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color-scheme: dark light;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    cursor: pointer;
+}
+
+/* ==================== Header ==================== */
+.title-bgnd {
+    width: 100%;
+    padding: .75em 0;
+    background-color: #4CAD49;
+}
+
+.title-bgnd p {
+    text-align: center;
+    font-weight: 400;
+    font-size: 2.75rem;
+    letter-spacing: .8px;
+    word-spacing: 2px;
+}
+
+/* Subheader */
+.subheader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3.75em 0;
+    background-color: #fff;
+}
+
+nav {
+    width: 90%;
+    margin-top: 1.875em;
+}
+
+nav ul {
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: .9375em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #151515;
+    letter-spacing: 2px;
+}
+
+nav a:hover {
+    color: #4CAD49;
+}
+
+/* Hero */
+.hero {
+    width: 80%;
+    margin: 0 auto;
+    height: 800px;
+    position: relative;
+}
+
+.hero-container {
+    background-image: url('./images/grassCourt.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-text {
+    background-color: rgb(76, 173, 73, .8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3.125em;
+    max-width: 45%;
+    min-width: 55%;
+    border: 1px solid rgb(76, 173, 73, .8);
+}
+
+h1 {
+    font-size: 2.75rem;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    margin-bottom: .9375em;
+}
+
+/* ==================== Main ==================== */
+main {
+    background-color: #4CAD49;
+    width: 100%;
+    margin-top: 2.5em;
+}
+
+.intro {
+    width: 55%;
+    margin: 0 auto;
+    padding: 3.75em 0;
+}
+
+.intro-title {
+    font-size: 2.75rem;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    margin-bottom: 1em;
+}
+
+.intro p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.intro a {
+    text-decoration: underline;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.intro a:hover {
+    color: #055802;
+}
+
+/* Aside / picture gallery */
+aside {
+    background-color: #4CAD49;
+    width: 90%;
+    margin: 0 auto;
+    padding: 3.75em .75em;
+}
+
+aside h4 {
+    font-size: 2.75rem;
+    font-weight: lighter;
+    margin: .5em 0;
+    align-self: center;
+}
+
+.club-photos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.club-photo-mosaic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.625em;
+}
+
+.photo {
+    overflow: hidden;
+    height: 278px;
+    width: 30%;
+    border: 1px solid #2a7b27;
+    box-shadow: 1px 2px 6px 1px #2a7b27;
+}
+
+.photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ==================== Footer ==================== */
+footer {
+    padding: 12px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 180px;
+}
+
+footer .credit {
+    color: #595959;
+    font-size: .75rem;
+    letter-spacing: 0.083rem;
+}
+
+footer a {
+    color: #3A8538;
+    text-decoration: none;
+}
+
+.chatbox-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 .625em 1.25em 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.chatbox {
+    overflow: hidden;
+    background-color: #4CAD49;
+    box-shadow: 1px 2px 4px 2px #387f35;
+    height: 4.0625em;
+    width: 4.0625em;
+    padding: .9375em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.chatbox:hover {
+    background-color: #7bd179;
+}
+
+/* ==================== Media Queries ==================== */
+
+/* TABLET */
+@media only screen and (max-width: 768px) {
+    .title-bgnd p {
+        font-size: 2rem;
+        width: 35%;
+        margin: 0 auto;
+    }
+    .hero {
+        width: 93%;
+    }
+    .hero-container {
+        height: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+    }
+    .hero-text {
+        background-color: #6AB168;
+        position: absolute;
+        bottom: 0;
+        height: 240px;
+        padding-bottom: 3.5em;
+        padding-left: 1.25em;
+        min-width: 100%;
+        border: none;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    h4.intro-title {
+        font-size: 2rem;
+    }
+    .intro {
+        width: 100%;
+        padding: 2.5em 1.5625em;
+    }
+    aside {
+        width: 100%;
+        padding-top: 6.25em;
+    }
+    aside h4 {
+        font-size: 2rem;
+        margin-left: 1.875em;
+    }
+    .photo {
+        width: 40%;
+        height: 100%;
+    }
+    .chatbox-container {
+        right: 1em;
+    }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 480px) {
+    nav ul li {
+        display: block;
+    }
+    aside {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
